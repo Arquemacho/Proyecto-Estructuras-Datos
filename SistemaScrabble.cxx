@@ -19,6 +19,16 @@ void SistemaScrabble::ejecutar() {
         if (comando == "salir") break;
     }
 }
+std::vector<std::string> SistemaScrabble::dividirComando(const std::string& comando) {
+    std::vector<std::string> resultado;
+    std::istringstream iss(comando);
+    std::string palabra;
+    while (iss >> palabra) {
+        resultado.push_back(palabra);
+    }
+    return resultado;
+}
+
 
 void SistemaScrabble::procesarComando(const std::string& comandoEntrada) {
     auto palabras = dividirComando(comandoEntrada);

@@ -12,9 +12,10 @@ public:
 private:
     std::unordered_set<std::string> diccionario;
     std::unordered_set<std::string> diccionarioInverso;
+	std::vector<std::string> dividirComando(const std::string& comando);
 
     void procesarComando(const std::string& comando);
-    void ayuda();
+    void ayuda(const std::vector<std::string>& args = {});
     void inicializarDiccionario(const std::string& archivo);
     void iniciarDiccionarioInverso(const std::string& archivo);
     void puntajePalabra(const std::string& palabra);

@@ -21,6 +21,12 @@ private:
   void puntajePalabra(const std::string &palabra);
   void salir();
   bool esValidaLaPalabra(const std::string &palabra);
+  void iniciarArbol(const std::string &archivo);
+  void iniciarArbolInverso(const std::string &archivo);
+  void palabrasPorPrefijo(const std::string &prefijo);
+  void palabrasPorSufijo(const std::string &sufijo);
+  void grafoDePalabras();
+  void posiblesPalabras(const std::string &letras);
 };
 
 #endif // SISTEMA_SCRABBLE_H
